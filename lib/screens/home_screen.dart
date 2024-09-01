@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/widgets/app_double_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,9 +11,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //column
     return Scaffold(
-      //want scrollable effect
+      //want scrollable
+      backgroundColor: AppStyles.bgColor,
       body: ListView(
         children: [
+          const SizedBox(height: 40),
           //1
           Container(
             // color: const Color.fromARGB(255, 33, 243, 173),
@@ -50,13 +53,31 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(FluentSystemIcons.ic_fluent_search_regular, color: Color(0xFFBFC205),),
-                    Text("Search icon"),
+                const SizedBox(height: 25),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xFFF4F6FD)),
+                  child: const Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        FluentSystemIcons.ic_fluent_search_regular,
+                        color: Color(0xFFBFC205),
+                      ),
+                      Text("Search"),
                     ],
-                )
+                  ),
+                ),
+                const SizedBox(height: 40),
+                const AppDoubleText(
+                  bigText: 'Upcoming Flights',
+                  smallText: 'View all',
+                ),
+              
+                
               ],
             ),
           )

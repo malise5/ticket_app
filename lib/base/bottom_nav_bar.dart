@@ -31,11 +31,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: const Text('My Ticket'),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.blue,
+      //   centerTitle: true,
+      //   title: const Text('My Ticket'),
+      // ),
       body: Center(
         child: appScreens[_selectedIndex]
         ),
